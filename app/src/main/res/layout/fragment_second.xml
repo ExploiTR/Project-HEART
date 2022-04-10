@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ui.SecondFragment">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/process_enable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/enable_near_real_time_processing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/store_enable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/store_data_in_sdc_to_process_later_low_memory"
+        app:layout_constraintStart_toEndOf="@+id/process_enable"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cpu_usage"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="@string/cpu_usage_freq_3sec_1_s"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/process_enable" />
+
+    <TextView
+        android:id="@+id/mem_usage"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="@string/mem_usage_freq_3sec_s"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/cpu_usage"
+        app:layout_constraintTop_toBottomOf="@+id/store_enable" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graphEcg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpu_usage"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:drawableEnd="@drawable/ic_action"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="@font/prx"
+        android:padding="8dp"
+        android:text="@string/results"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/graphEcg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/store_enable"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/resume_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.85"
+        android:textOff="@string/pause"
+        android:textOn="@string/resume"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/graphEcg"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="@+id/graphEcg"
+        app:layout_constraintTop_toTopOf="@+id/graphEcg" />
+
+    <ImageButton
+        android:id="@+id/enable_circles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:alpha="0.85"
+        android:background="#00ffffff"
+        android:contentDescription="@string/enables_circles_in_graph"
+        android:src="@drawable/ic_enable_circles"
+        android:tint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="@+id/resume_pause"
+        app:layout_constraintStart_toEndOf="@+id/resume_pause"
+        app:layout_constraintTop_toTopOf="@+id/resume_pause" />
+
+    <ImageButton
+        android:id="@+id/enable_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:alpha="0.85"
+        android:background="#00ffffff"
+        android:contentDescription="@string/enables_values_in_graph"
+        android:src="@drawable/ic_enable_values"
+        android:tint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="@+id/resume_pause"
+        app:layout_constraintEnd_toStartOf="@+id/resume_pause"
+        app:layout_constraintTop_toTopOf="@+id/resume_pause" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

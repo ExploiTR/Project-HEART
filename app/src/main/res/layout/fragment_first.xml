@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FirstFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintVertical_bias="0.32"
+        app:lottie_rawRes="@raw/searching"
+        app:lottie_renderMode="hardware"
+        app:lottie_scale="1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/percent_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/prx"
+        android:gravity="center"
+        android:text="@string/waiting"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prompt_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:background="@drawable/button_back"
+        android:drawableStart="@drawable/ic_action"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:padding="16dp"
+        android:text="@string/connect"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percent_scan" />
+</androidx.constraintlayout.widget.ConstraintLayout>
