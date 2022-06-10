@@ -1,4 +1,4 @@
-# Project-HEART - Final Year Project
+# Project-Heart - Final Year Project
 
 Automated and portable heart disease analyser.
 
