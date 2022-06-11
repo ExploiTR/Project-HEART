@@ -26,9 +26,9 @@
     <string name="enables_values_in_graph">enables values in graph</string>
     <string name="enables_circles_in_graph">enables circles in graph</string>
     <string name="analysis_results">Analysis Results</string>
-    <string name="normal_beats_0">Non Ectopic beats (Normal beats) : %d percent of %d samples.</string>
-    <string name="supraventrical_beats_1">Supraventrical ectopic beats : %d percent of %d samples.</string>
-    <string name="ventricular_beats_2">Ventricular ectopic beats : %d percent of %d samples.</string>
-    <string name="fusion_beats_3">Fusion beats : %d percent of %d samples.</string>
-    <string name="unknown_beats_4">Unknown Beats : %d percent of %d samples.</string>
+    <string name="normal_beats_0">Non Ectopic beats (Normal beats) : %.2f percent of %d samples.</string>
+    <string name="supraventrical_beats_1">Supraventrical ectopic beats : %.2f percent of %d samples.</string>
+    <string name="ventricular_beats_2">Ventricular ectopic beats : %.2f percent of %d samples.</string>
+    <string name="fusion_beats_3">Fusion beats : %.2f percent of %d samples.</string>
+    <string name="unknown_beats_4">Unknown Beats : %.2f percent of %d samples.</string>
 </resources>

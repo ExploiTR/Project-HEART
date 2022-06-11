@@ -4,7 +4,6 @@
 #include "WiFiManager.h"
 
 void disp(String str);
-void SAVEMEM();
 void sensors_or_commands(WiFiClient client);
 void engageOTA();
 void configModeCallback(WiFiManager *myWiFiManager);
@@ -118,7 +117,7 @@ void engageOTA()
 
 void configModeCallback(WiFiManager *myWiFiManager)
 {
-    disp("Entered config mode");
+    disp("Entered config mode\n");
     disp(WiFi.softAPIP().toString());
     disp(myWiFiManager->getConfigPortalSSID());
 }

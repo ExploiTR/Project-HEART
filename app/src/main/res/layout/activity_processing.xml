@@ -6,41 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.Processing">
 
-    <TextView
-        android:id="@+id/textView0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/analysis_results"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--  <TextView
+          android:id="@+id/textView0"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="48dp"
+          android:layout_marginEnd="16dp"
+          android:text="@string/analysis_results"
+          android:textSize="24sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" /> -->
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:textColor="@android:color/holo_green_dark"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/normal_beats_0"
-        app:layout_constraintTop_toBottomOf="@+id/textView0" />
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ventricular_beats_2"
         android:layout_margin="16dp"
+        android:text="@string/ventricular_beats_2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/supraventrical_beats_1"
         android:layout_margin="16dp"
+        android:text="@string/supraventrical_beats_1"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
@@ -48,16 +51,26 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/fusion_beats_3"
         android:layout_margin="16dp"
+        android:text="@string/fusion_beats_3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/unknown_beats_4"
         android:layout_margin="16dp"
+        android:text="@string/unknown_beats_4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
