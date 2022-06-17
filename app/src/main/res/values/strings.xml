@@ -31,4 +31,6 @@
     <string name="ventricular_beats_2">Ventricular ectopic beats : %.2f percent of %d samples.</string>
     <string name="fusion_beats_3">Fusion beats : %.2f percent of %d samples.</string>
     <string name="unknown_beats_4">Unknown Beats : %.2f percent of %d samples.</string>
+    <string name="possible_disease_details">Possible Issues :</string>
+    <string name="unknown">Unknown.. but really?\n just a test right?</string>
 </resources>
