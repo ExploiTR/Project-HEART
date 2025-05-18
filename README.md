@@ -31,7 +31,7 @@ Project-HEART is an automated and portable heart disease analyzer that integrate
 
 ### Dataset
 
-- Kaggle ECG dataset (used for training the machine learning model)
+- [Kaggle ECG dataset](https://www.kaggle.com/datasets/sadmansakib7/ecg-arrhythmia-classification-dataset) (used for training the machine learning model)
 
 ## Usage
 
